@@ -63,7 +63,7 @@ function newGame() {
 
 }
 
-var x = Math.random();
+//var x = Math.random();
 
 function getComputerPick() {
     var possiblePicks = ['rock', 'paper', 'scissors'];
@@ -79,7 +79,7 @@ var playerPickElem = document.getElementById('js-playerPick'),
 function checkRoundWinner(playerPick, computerPick) {
 	playerResultElem.innerHTML = computerResultElem.innerHTML = '';
   	var winnerIs = 'player';
- 	var delayedEndGame = setTimeout(endGame, 10);
+ 	//var delayedEndGame = setTimeout(endGame, 10);
     if (playerPick == computerPick) {
         winnerIs = 'noone'; // remis
     } else if (
@@ -93,12 +93,12 @@ function checkRoundWinner(playerPick, computerPick) {
         playerResultElem.innerHTML = "Win!";
         player.score++;
         setGamePoints();
-        delayedEndGame;
+        setTimeout(endGame, 10);
     } else if (winnerIs == 'computer') {
         computerResultElem.innerHTML = "Win!";
         computer.score++;
         setGamePoints();
-        delayedEndGame;
+        setTimeout(endGame, 10);
     }
 }
 
